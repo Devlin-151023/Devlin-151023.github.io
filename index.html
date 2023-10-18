@@ -11,7 +11,7 @@
             <a href="index.html" class="button">Home</a>
             <a href="About.html" class="button">About</a>
             <a href="Contact.html" class="button">Contact</a>
-            <a href="Alexander Devlin - CV Feb22.pdf" class="button" download>Download CV</a>
+            <a class="button" id="downloadButton">Download CVs</a>
         </div>
                 <section id="home">
                     <h1>Welcome to My Digital CV</h1>
@@ -36,5 +36,31 @@
                 <footer>
                     <p>&copy; 2023 Alexander Devlin</p>
                 </footer>
+
+                <script>
+                    document.getElementById("downloadButton").addEventListener("click", function() {
+                        var pdf1 = "Alexander Devlin - CV Oct23.pdf"; 
+                        var pdf2 = "Alexander Devlin - Appraisals Jan22.pdf";
+            
+                        // Create an anchor element for each PDF
+                        var link1 = document.createElement("a");
+                        link1.href = pdf1;
+                        link1.download = "Alexander Devlin - CV.pdf";  // Default file name for the user
+                        link1.style.display = "none";  // Hide the link
+                        document.body.appendChild(link1);
+                        link1.click();
+            
+                        var link2 = document.createElement("a");
+                        link2.href = pdf2;
+                        link2.download = "Alexander Devlin - Appraisals.pdf";  // Default file name for the user
+                        link2.style.display = "none";  // Hide the link
+                        document.body.appendChild(link2);
+                        link2.click();
+            
+                        // Clean up the temporary anchor elements
+                        document.body.removeChild(link1);
+                        document.body.removeChild(link2);
+                    });
+                </script>
     </body>
 </html>
