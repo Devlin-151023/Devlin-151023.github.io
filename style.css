@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     .content {
-        padding: 20px; /* Adjust the padding as needed */
+        padding: 5px; /* Adjust the padding as needed */
     }
     
 }
@@ -40,6 +40,6 @@ body {
     }
 
     .button {
-        margin: 10px 0;
+        margin: 3px 0;
     }
 }
