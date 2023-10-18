@@ -4,7 +4,8 @@ body {
     margin: 0;
     padding: 0;
     .content {
-        padding: 5px; /* Adjust the padding as needed */
+        padding: 5px; 
+        text-align: justify;
     }
     
 }
