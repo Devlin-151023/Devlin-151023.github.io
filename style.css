@@ -48,6 +48,10 @@ body {
 .portrait-container {
     text-align: center;
     margin: 20px; /* Adjust the margin as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .portrait-container img {
