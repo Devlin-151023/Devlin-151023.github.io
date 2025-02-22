@@ -15,7 +15,6 @@ body {
     display: flex;
     justify-content: flex-end;
     padding: 5px 0;
-    position: fixed;
 }
 
 .footer {
