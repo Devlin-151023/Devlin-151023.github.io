@@ -20,9 +20,10 @@ body {
 .footer {
     background-color: #333;
     display: flex;
-    color: #fff; 
+    color: #fff;
+    padding: 0px 0;
     text-align: center;
-    padding: 2px;
+    justify-content: center;
 }
 
 .button {
