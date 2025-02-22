@@ -21,12 +21,8 @@ body {
     background-color: #333;
     display: flex;
     color: #fff; 
-    text-align: center !important;
-    padding: 5px;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    box-sizing: border-box;
+    text-align: center;
+    padding: 2px;
 }
 
 .button {
