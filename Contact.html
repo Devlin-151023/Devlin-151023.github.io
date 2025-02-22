@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
 
+    <!-- Keep Your Existing Navigation Bar -->
     <nav class="navbar">
         <a href="index.html" class="button">Home</a>
         <a href="About.html" class="button">About</a>
@@ -16,30 +17,23 @@
         <a class="button" id="downloadButton">Download CV</a>
     </nav>
 
+    <!-- Contact Form Section -->
     <section class="contact-form">
         <h2>Contact Me</h2>
         <p>Have a question or want to work together? Send me a message below.</p>
 
-        <!-- Formspree Template (Modified for Better UX) -->
         <form id="contactForm" action="https://formspree.io/f/mzzdwoao" method="POST">
             
-            <label>
-                Your Email:
-                <input type="email" name="email" placeholder="Enter your email" required>
-            </label>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
 
-            <label>
-                Your Message:
-                <textarea name="message" rows="5" placeholder="Write your message here" required></textarea>
-            </label>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
-            <!-- Add Additional Fields If Needed -->
-            <label>
-                Your Name:
-                <input type="text" name="name" placeholder="Enter your name" required>
-            </label>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
 
-            <!-- Google reCAPTCHA for Spam Protection -->
+            <!-- reCAPTCHA v2 Checkbox -->
             <div class="g-recaptcha" data-sitekey="6Lcnkt8qAAAAALvjJ0TEpKQIbQ5G8h_i4ysD48gH"></div>
 
             <button type="submit">Send</button>
