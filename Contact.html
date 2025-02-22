@@ -3,36 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Development</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-        }
-        .container {
-            margin: 10% auto;
-            max-width: 400px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-        }
-        img {
-            max-width: 100px;
-            height: auto;
-        }
-    </style>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1>Coming soon...</h1>
-        <img src="webunderconstruction.png" alt="Loading">
-        <br>
-        <a href="index.html">Return to Home</a>
-    </div>
+
+    <nav class="navbar">
+        <a href="index.html" class="button">Home</a>
+        <a href="About.html" class="button">About</a>
+        <a href="Contact.html" class="button">Contact</a>
+        <a class="button" id="downloadButton">Download CV</a>
+    </nav>
+
+    <section class="contact-form">
+        <h2>Contact Me</h2>
+        <p>Have a question or want to work together? Send me a message below.</p>
+
+        <!-- Formspree Template (Modified for Better UX) -->
+        <form id="contactForm" action="https://formspree.io/f/mzzdwoao" method="POST">
+            
+            <label>
+                Your Email:
+                <input type="email" name="email" placeholder="Enter your email" required>
+            </label>
+
+            <label>
+                Your Message:
+                <textarea name="message" rows="5" placeholder="Write your message here" required></textarea>
+            </label>
+
+            <!-- Add Additional Fields If Needed -->
+            <label>
+                Your Name:
+                <input type="text" name="name" placeholder="Enter your name" required>
+            </label>
+
+            <!-- Google reCAPTCHA for Spam Protection -->
+            <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+
+            <button type="submit">Send</button>
+        </form>
+
+        <p id="formMessage"></p>
+    </section>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
