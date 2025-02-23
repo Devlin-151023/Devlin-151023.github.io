@@ -6,6 +6,31 @@
     <title>Contact Me</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <style>            
+        .custom-button {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;               /* dark text for readability */
+            background-color: #fff;    /* white background */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s, border-color 0.3s;
+            }
+
+            .custom-button:hover {
+                background-color: #f0f0f0; /* a light grey on hover */
+                border-color: #ccc;
+            }
+
+    </style>
+
 </head>
 <body>
 
@@ -35,7 +60,7 @@
             <!-- reCAPTCHA v2 Checkbox -->
             <div class="g-recaptcha" data-sitekey="6Lcnkt8qAAAAALvjJ0TEpKQIbQ5G8h_i4ysD48gH" style="display: flex; justify-content: center; margin-top: 10px;"></div>
 
-            <button type="submit" style="width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px;">Send</button>
+            <button type="submit" class="custom-button">Send</button>
 
         </form>
     </section>

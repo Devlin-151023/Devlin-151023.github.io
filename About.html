@@ -25,22 +25,28 @@
             max-width: 100px;
             height: auto;
         }
+            
         .button {
             display: inline-block;
-            padding: 10px 20px;
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
             font-size: 16px;
             font-weight: bold;
-            color: white;
-            background-color: #007bff;
-            border: none;
+            color: #333;               /* dark text for readability */
+            background-color: #fff;    /* white background */
+            border: 1px solid #ddd;
             border-radius: 5px;
             text-decoration: none;
             margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #0056b3;
-        }
+            transition: background-color 0.3s, border-color 0.3s;
+            }
+
+            .button:hover {
+                background-color: #f0f0f0; /* a light grey on hover */
+                border-color: #ccc;
+            }
+
     </style>
 </head>
 <body>
