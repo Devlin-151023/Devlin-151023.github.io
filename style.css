@@ -54,6 +54,12 @@ body {
     }
 }
 
+.profile-pic{
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+}
+
 .portrait-container {
     text-align: center;
 }
