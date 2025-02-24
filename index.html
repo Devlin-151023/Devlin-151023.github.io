@@ -11,7 +11,7 @@
             <a href="index.html" class="button">Home</a>
             <a href="About.html" class="button">About</a>
             <a href="Contact.html" class="button">Contact</a>
-            <a class="button" id="downloadButton">Download CV</a>
+            <a class="button" id="downloadButton">Download</a>
         </nav>
                 
         <div class="content"> 
@@ -48,31 +48,67 @@
             
         </div>
 
-                <script>
-                    document.getElementById("downloadButton").addEventListener("click", function() {
-                        var pdf1 = "Alexander Devlin - CV Oct23.pdf"; 
-                        var pdf2 = "Alexander Devlin - Appraisals Oct23.pdf";
-            
-                        // Create an anchor element for each PDF
-                        var link1 = document.createElement("a");
-                        link1.href = pdf1;
-                        link1.download = "Alexander Devlin - CV.pdf";  // Default file name for the user
-                        link1.style.display = "none";  // Hide the link
-                        document.body.appendChild(link1);
-                        link1.click();
-            
-                        var link2 = document.createElement("a");
-                        link2.href = pdf2;
-                        link2.download = "Alexander Devlin - Appraisals.pdf";  // Default file name for the user
-                        link2.style.display = "none";  // Hide the link
-                        document.body.appendChild(link2);
-                        link2.click();
-            
-                        // Clean up the temporary anchor elements
-                        document.body.removeChild(link1);
-                        document.body.removeChild(link2);
-                    });
-                </script>
+        <!-- Modal HTML for file selection -->
+        <div id="downloadModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fff; padding:20px; box-shadow:0 0 10px rgba(0,0,0,0.5); z-index:1000;">
+            <h3>Select Files to Download</h3>
+            <select id="fileSelector" style="width:100%; height: 50px;">
+            <option value="cv">Alexander Devlin - CV</option>
+            <option value="appraisals">Alexander Devlin - Appraisals</option>
+            </select>
+            <br><br>
+            <button id="confirmDownload" class="download-button">Download</button>
+            <button id="cancelDownload" class="download-button">Cancel</button>
+        </div>
+        
+        <script>
+            // Show the modal when the download button is clicked
+            document.getElementById("downloadButton").addEventListener("click", function() {
+              document.getElementById("downloadModal").style.display = "block";
+            });
+          
+            // When the user clicks "Download Selected"
+            document.getElementById("confirmDownload").addEventListener("click", function() {
+              // Mapping file keys to their paths and default download names
+              var files = {
+                cv: {
+                  path: "Alexander Devlin - CV Oct23.pdf",
+                  name: "Alexander Devlin - CV.pdf"
+                },
+                appraisals: {
+                  path: "Alexander Devlin - Appraisals Oct23.pdf",
+                  name: "Alexander Devlin - Appraisals.pdf"
+                }
+              };
+          
+              var selector = document.getElementById("fileSelector");
+              // Retrieve selected file keys
+              var selectedOptions = Array.from(selector.selectedOptions).map(option => option.value);
+          
+              // Trigger downloads for each selected file
+              selectedOptions.forEach(function(key) {
+                if (files[key]) {
+                  var link = document.createElement("a");
+                  link.href = files[key].path;
+                  link.download = files[key].name;
+                  link.style.display = "none";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }
+              });
+          
+              // Hide the modal after downloads
+              document.getElementById("downloadModal").style.display = "none";
+            });
+          
+            // Hide the modal if the user clicks "Cancel"
+            document.getElementById("cancelDownload").addEventListener("click", function() {
+              document.getElementById("downloadModal").style.display = "none";
+            });
+          </script>
+          
+  
+  
     </body>
     
     <div class="socials">    
