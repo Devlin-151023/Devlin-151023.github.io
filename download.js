@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
             name: "Alexander Devlin - Appraisals.pdf"
           }
         };
-    
+  
         var selector = document.getElementById("fileSelector");
         // Retrieve selected file keys
         var selectedOptions = Array.from(selector.selectedOptions).map(option => option.value);
-    
+  
         // Trigger downloads for each selected file
         selectedOptions.forEach(function(key) {
           if (files[key]) {
@@ -40,16 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.removeChild(link);
           }
         });
-    
+  
         // Hide the modal after downloads
         document.getElementById("downloadModal").style.display = "none";
       });
     }
   
-    // Hide the modal if the user clicks "Cancel"
-    var cancelDownload = document.getElementById("cancelDownload");
-    if (cancelDownload) {
-      cancelDownload.addEventListener("click", function() {
+    // Hide the modal when the close icon is clicked
+    var closeModal = document.getElementById("closeModal");
+    if (closeModal) {
+      closeModal.addEventListener("click", function() {
         document.getElementById("downloadModal").style.display = "none";
       });
     }

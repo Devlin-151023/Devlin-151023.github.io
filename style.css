@@ -129,6 +129,18 @@ ul li{
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     font-family: Arial, sans-serif;
     box-sizing: border-box;
+    position: relative; /* Needed for positioning the close icon */
+  }
+  
+  /* Close button styling */
+  .modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
   }
   
   /* Modal header styling */
@@ -148,43 +160,38 @@ ul li{
     font-size: 16px;
   }
   
-  /* Modal button container updated for mobile */
+  /* Modal button container (centered) */
   .modal-buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;   /* Prevents buttons from wrapping */
-    justify-content: space-between;
-    gap: 10px;
+    text-align: center;
     margin-top: 15px;
   }
   
-  /* Button styling for modal */
+  /* Button styling for the Download button */
   .modal-buttons button {
-    flex: 1;              /* Makes buttons equally wide */
-    padding: 10px;
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
     font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    white-space: nowrap;  /* Prevents text from wrapping */
+    font-weight: bold;
+    color: #333;               /* dark text for readability */
+    background-color: #fff;    /* white background */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s, border-color 0.3s;
   }
-  
-  /* Specific styles for Cancel and Download buttons */
-  .modal-buttons .cancel {
-    background-color: #dc3545;
-    color: #fff;
-  }
-  
-  .modal-buttons .download {
-    background-color: #007BFF;
-    color: #fff;
-  }
-  
+
+  .modal-buttons button:hover {
+    background-color: #f0f0f0; /* a light grey on hover */
+    border-color: #ccc;
+}
+
   /* Mobile adjustments */
   @media (max-width: 500px) {
     .modal-content {
-      width: 95%; /* Increase modal width on smaller screens */
-      margin: 15% auto; /* Adjust vertical margin if needed */
+      width: 95%;
+      margin: 15% auto;
     }
   }
   
