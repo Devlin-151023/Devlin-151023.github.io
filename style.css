@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-    background: linear-gradient(to top, lightgrey 0%, #777 5%, #333 10%, #333 100%);
+    background: #333;
     display: flex;
     justify-content: flex-end;
     padding: 5px 0;
