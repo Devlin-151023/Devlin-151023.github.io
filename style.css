@@ -21,6 +21,10 @@ ul li{
     margin-bottom: 10px;
 }
 
+#downloadButton {
+  cursor: pointer;
+}
+
 .socials{
     background: linear-gradient(to bottom, lightgrey 10%,darkgrey 25%, #333 65%, #333 100%);
     display: flex;
