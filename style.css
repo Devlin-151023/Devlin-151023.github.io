@@ -189,6 +189,7 @@ ul li{
   .modal-buttons button:hover {
     background-color: #f0f0f0; /* a light grey on hover */
     border-color: #ccc;
+    cursor: pointer;
 }
 
   /* Mobile adjustments */
