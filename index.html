@@ -48,66 +48,19 @@
             
         </div>
 
-        <!-- Modal HTML for file selection -->
         <div id="downloadModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:#fff; padding:20px; box-shadow:0 0 10px rgba(0,0,0,0.5); z-index:1000;">
             <h3>Select Files to Download</h3>
             <select id="fileSelector" style="width:100%; height: 50px;">
-            <option value="cv">Alexander Devlin - CV</option>
-            <option value="appraisals">Alexander Devlin - Appraisals</option>
+              <option value="cv">Alexander Devlin - CV</option>
+              <option value="appraisals">Alexander Devlin - Appraisals</option>
             </select>
             <br><br>
             <button id="confirmDownload" class="download-button">Download</button>
             <button id="cancelDownload" class="download-button">Cancel</button>
-        </div>
-        
-        <script>
-            // Show the modal when the download button is clicked
-            document.getElementById("downloadButton").addEventListener("click", function() {
-              document.getElementById("downloadModal").style.display = "block";
-            });
+          </div>
           
-            // When the user clicks "Download Selected"
-            document.getElementById("confirmDownload").addEventListener("click", function() {
-              // Mapping file keys to their paths and default download names
-              var files = {
-                cv: {
-                  path: "Alexander Devlin - CV Oct23.pdf",
-                  name: "Alexander Devlin - CV.pdf"
-                },
-                appraisals: {
-                  path: "Alexander Devlin - Appraisals Oct23.pdf",
-                  name: "Alexander Devlin - Appraisals.pdf"
-                }
-              };
-          
-              var selector = document.getElementById("fileSelector");
-              // Retrieve selected file keys
-              var selectedOptions = Array.from(selector.selectedOptions).map(option => option.value);
-          
-              // Trigger downloads for each selected file
-              selectedOptions.forEach(function(key) {
-                if (files[key]) {
-                  var link = document.createElement("a");
-                  link.href = files[key].path;
-                  link.download = files[key].name;
-                  link.style.display = "none";
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }
-              });
-          
-              // Hide the modal after downloads
-              document.getElementById("downloadModal").style.display = "none";
-            });
-          
-            // Hide the modal if the user clicks "Cancel"
-            document.getElementById("cancelDownload").addEventListener("click", function() {
-              document.getElementById("downloadModal").style.display = "none";
-            });
-          </script>
-          
-  
+          <!-- External JavaScript file -->
+          <script src="download.js"></script>  
   
     </body>
     

@@ -128,6 +128,7 @@ ul li{
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
   }
   
   /* Modal header styling */
@@ -147,13 +148,34 @@ ul li{
     font-size: 16px;
   }
   
-  /* Modal button container */
+  /* Modal button container updated for mobile */
   .modal-buttons {
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
   }
   
-  /* Optional: spacing adjustments for buttons */
-  .modal-buttons .button {
-    margin-left: 10px;
+  /* Button styling for modal */
+  .modal-buttons button {
+    flex: 1;              /* Makes buttons equally wide */
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    white-space: nowrap;  /* Prevents text from wrapping */
   }
+  
+  /* Specific styles for Cancel and Download buttons */
+  .modal-buttons .cancel {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .modal-buttons .download {
+    background-color: #007BFF;
+    color: #fff;
+  }
+  
   
