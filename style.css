@@ -151,6 +151,8 @@ ul li{
   /* Modal button container updated for mobile */
   .modal-buttons {
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;   /* Prevents buttons from wrapping */
     justify-content: space-between;
     gap: 10px;
     margin-top: 15px;
@@ -176,6 +178,14 @@ ul li{
   .modal-buttons .download {
     background-color: #007BFF;
     color: #fff;
+  }
+  
+  /* Mobile adjustments */
+  @media (max-width: 500px) {
+    .modal-content {
+      width: 95%; /* Increase modal width on smaller screens */
+      margin: 15% auto; /* Adjust vertical margin if needed */
+    }
   }
   
   
