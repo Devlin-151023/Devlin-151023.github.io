@@ -11,7 +11,7 @@ body {
 }
 
 .navbar {
-    background-color: #333;
+    background: linear-gradient(to top, lightgrey 0%, #777 10%, #333 20%, #333 100%);
     display: flex;
     justify-content: flex-end;
     padding: 5px 0;
@@ -19,6 +19,22 @@ body {
 
 ul li{
     margin-bottom: 10px;
+}
+
+.socials{
+    background: linear-gradient(to bottom, lightgrey 10%,darkgrey 25%, #333 65%, #333 100%);
+    display: flex;
+    color: #fff;
+    padding: 0px 0;
+}
+
+.socials h4 {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.first-socials-icon{
+    margin-left: 10px;
 }
 
 .footer {
@@ -35,7 +51,6 @@ ul li{
     margin: 0 10px;
     display: inline-block;
     padding: 10px 20px;
-    border: 2px solid #333;
     border-radius: 2px;
     color: #fff;
     transition: background-color 0.3s, color 0.3s;
